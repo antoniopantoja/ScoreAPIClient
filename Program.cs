@@ -13,7 +13,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApi();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddSingleton<ICustomerRepository, InMemoryCustomerRepository>();
+builder.Services.AddScoped<ICustomerRepository, CustomerSqlRepository>();
 builder.Services.AddScoped<ICpfValidator, CpfValidator>();
 builder.Services.AddScoped<IScoreCalculator, ScoreCalculator>();
 builder.Services.AddScoped<ICustomerService, CustomerService>();
