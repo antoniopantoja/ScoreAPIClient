@@ -1,0 +1,5 @@
+IF DB_ID('ScoreAPIClient') IS NULL
+BEGIN
+    CREATE DATABASE ScoreAPIClient;
+END;
+GO
